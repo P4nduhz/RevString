@@ -1,7 +1,7 @@
 #rev.py                                      
-def my_function(x):
+def reverse_string(x):
   return x[::-1]
 
 input = input("Enter your string to be reversed: ")
-mytxt = my_function(input)
+mytxt = reverse_string(input)
 print(mytxt)
