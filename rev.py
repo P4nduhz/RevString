@@ -1,16 +1,15 @@
 #rev.py
-#art
-print("|=================================================|")
-print("|  _____             _____ _        _             |")
-print("| |  __ \           / ____| |      (_)            |")
-print("| | |__) |_____   _| (___ | |_ _ __ _ _ __   __ _ |")
-print("| |  _  // _ \ \ / /\___ \| __| '__| | '_ \ / _` ||")
-print("| | | \ \  __/\ V / ____) | |_| |  | | | | | (_| ||")
-print("| |_|  \_\___| \_/ |_____/ \__|_|  |_|_| |_|\__, ||")
-print("|                                            __/ ||")
-print("|    By P4nduhz                             |___/ |")
-print("|    github.com/PPanduhz                          |")
-print("|=================================================|")
+print("|==================================================|")
+print("|  _____             _____ _        _              |")
+print("| |  __ \           / ____| |      (_)             |")
+print("| | |__) |_____   _| (___ | |_ _ __ _ _ __   __ _  |")
+print("| |  _  // _ \ \ / /\___ \| __| '__| | '_ \ / _` | |")
+print("| | | \ \  __/\ V / ____) | |_| |  | | | | | (_| | |")
+print("| |_|  \_\___| \_/ |_____/ \__|_|  |_|_| |_|\__, | |")
+print("|                                            __/ | |")
+print("|    By P4nduhz                             |___/  |")
+print("|    github.com/PPanduhz                           |")
+print("|==================================================|")
 print()
 
 
@@ -41,6 +40,7 @@ def reverse_string(input):
 #asks user input
 input = input("Enter your string to be reversed: ")
 if not input:
+#if no input error message displayed
     print("No input provided. Please enter a valid string.")
 else:
     #calls function with the input
