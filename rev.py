@@ -12,25 +12,25 @@ print("|    By P4nduhz                             |___/ |")
 print("|    github.com/PPanduhz                          |")
 print("|=================================================|")
 print()
+
+
 import argparse
 
 #create an ArgumentParser object
 parser = argparse.ArgumentParser(description = 'Reverse a String')
 #declare arguments
-parser.add_argument('-s', type = int, required = False, help='removes spaces from the reversed string')
-parser.add_argument('-a', type = int, required = False, help='reverses the string for every value given')
+parser.add_argument('-s', action = 'store_true', help='removes spaces from the reversed string')
+parser.add_argument('-a', type = int, default = 1, help='reverses the string for every value given')
 args = parser.parse_args()
-#still need to encorporate arguments into program.
-
-
 
 #reverse string function
 def reverse_string(input):
-    str = "" #placeholder
-    for i in input:
-        str = i + str
-    return str #returns reversed string
-
+    if args.s:
+        input = input.replace(" ", "")
+    str = ""
+    for i in range(0, len(input), args.a):
+        str = input[i:i+args.a] + str
+    return str
 
 #asks user input
 input = input("Enter your string to be reversed: ")
