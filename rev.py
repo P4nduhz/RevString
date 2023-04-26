@@ -14,14 +14,18 @@ print("|=================================================|")
 print()
 
 
+
 import argparse
 
 #create an ArgumentParser object
 parser = argparse.ArgumentParser(description = 'Reverse a String')
+
 #declare arguments
 parser.add_argument('-s', action = 'store_true', help='removes spaces from the reversed string')
 parser.add_argument('-a', type = int, default = 1, help='reverses the string for every value given')
 args = parser.parse_args()
+
+
 
 #reverse string function
 def reverse_string(input):
@@ -32,9 +36,14 @@ def reverse_string(input):
         str = input[i:i+args.a] + str
     return str
 
+
+
 #asks user input
 input = input("Enter your string to be reversed: ")
-#calls function with the input
-mytxt = reverse_string(input)
-#prints out the function
-print(mytxt)
+if not input:
+    print("No input provided. Please enter a valid string.")
+else:
+    #calls function with the input
+    mytxt = reverse_string(input)
+    #prints out the function
+    print(mytxt)
